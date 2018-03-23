@@ -17,7 +17,20 @@ const notify = async (title, data = {}) => {
 const handleInstallation = async (evt) => {
     console.log(`Installing ${CACHE_ID}`);
     const cache = await caches.open(CACHE_ID);
-    const installationResult = await cache.addAll(FILES);
+    var mydata = [
+        "static/js/bundle.js",
+         "static/css/main.29266132.css",
+        "static/css/main.29266132.css.map",
+        "static/js/main.62b8369b.js",
+        "static/js/main.62b8369b.js.map",
+        "static/media/kugel_mit_schale_3.bccb5a5d.png",
+       "static/media/logo.5d5d9eef.svg"
+    ];
+
+    console.log('values=', mydata);
+    const installationResult = await cache.addAll(mydata);
+
+    // const installationResult = await cache.addAll(FILES);
     // Is there already a service worker (= a previous version) running?
     // Then this is an upgrade
     if (self.registration.active) {
@@ -46,7 +59,7 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request)
             .then(function(response) {
-                // Cache hit - return response
+                // Cache hit - return responsenp
                 if (response) {
                     console.log('match in cache', response);
                     return response;
@@ -57,14 +70,7 @@ self.addEventListener('fetch', function(event) {
                 // once by cache and once by the browser for fetch, we need
                 // to clone the response.
                 var fetchRequest = event.request.clone();
-                if (fetchRequest.url.includes('svg')) {
-                    console.log('replace image...');
-                    fetchRequest.url = REPLACE;
-                    return fetch(fetchRequest).then(function(response) {
-                            return response;
-                        }
-                    )
-                }
+                console.log('fetch ', fetchRequest.url);
 
                 return fetch(fetchRequest).then(
                     function(response) {
@@ -86,6 +92,9 @@ self.addEventListener('fetch', function(event) {
                                     console.log('put into cache', responseToCache);
                                     cache.put(event.request, responseToCache);
                                 }
+                            })
+                            .catch(reason => {
+                                console.log(reason);
                             });
 
                         return response;
