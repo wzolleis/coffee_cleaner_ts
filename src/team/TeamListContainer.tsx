@@ -3,33 +3,23 @@ import { TeamComponent } from './TeamComponent';
 import { Team, State } from '../Types';
 import { connect } from 'react-redux';
 
-class TeamListContainer extends React.Component {
-    state = {
-        teams: []
-    };
+type TeamListProps = {
+    teams: Team[]
+};
 
-    componentDidMount() {
-        // load teams from server
-        const teams: Team[] = [{
-            name: 'Udo, Elmar,Michael'
-        },
-            {
-                name: 'Wolfgang, Jürgen, Christian'
-            }
-        ];
-        this.setState({teams});
-    }
+class TeamListContainer extends React.Component<TeamListProps> {
 
     render() {
-        const elements = this.state.teams.map((team: Team, index: number) => {
+        const elements = this.props.teams.map((team: Team, index: number) => {
             return <TeamComponent key={index} name={team.name}/>;
         });
         return (
             <React.Fragment>{elements}</React.Fragment>
         );
     }
+
 }
 
-const mapStateToProps = (state: State) => ({});
+const mapStateToProps = (state: State): TeamListProps => ({teams: state.teams});
 
 export const TeamList = connect(mapStateToProps, null)(TeamListContainer);
