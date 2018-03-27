@@ -1,4 +1,5 @@
 import * as React from 'react';
+const logo = require('../assets/logo.jpg');
 
 interface NavbarProps {
 
@@ -9,7 +10,9 @@ export class Navbar extends React.Component<NavbarProps> {
         return (
             <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">Navbar</a>
+                <a className="navbar-brand" href="#">
+                    <img src={logo} className="App-logo" alt="logo" />
+                </a>
                 <button
                     className="navbar-toggler"
                     type="button"
