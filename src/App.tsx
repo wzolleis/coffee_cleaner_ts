@@ -2,19 +2,22 @@ import * as React from 'react';
 import './App.css';
 import { TeamList } from './team/TeamListContainer';
 import { Navbar } from './navbar/Navbar';
+import { Switch, Route } from 'react-router';
+import { Home } from './components/Home';
+import { About } from './components/About';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <header>
-          <h1 className="App-title">Coffee Cleaner</h1>
             <Navbar/>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <TeamList/>
+        <Switch>
+          <Route exact={true} path="/home" component={Home}/>
+          <Route exact={true} path="/about" component={About}/>
+          <Route exact={true} path="/teams" component={TeamList}/>
+          </Switch>
       </div>
     );
   }
