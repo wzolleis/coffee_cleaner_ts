@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { TeamComponent } from './TeamComponent';
-import { Team, State } from '../Types';
+import { Team, State } from '../app/Types';
 import { connect } from 'react-redux';
 
 type TeamListProps = {

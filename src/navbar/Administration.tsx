@@ -15,8 +15,8 @@ export const Administration = () => {
             Administration
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a className="dropdown-item" href="#">Reinigungskräfte</a>
-            <a className="dropdown-item" href="#">Teams</a>
+            <a className="dropdown-item" href="/admin/cleaner">Reinigungskräfte</a>
+            <a className="dropdown-item" href="/admin/teams">Teams</a>
             <div className="dropdown-divider"/>
             <a className="dropdown-item" href="#">Something else here</a>
         </div>

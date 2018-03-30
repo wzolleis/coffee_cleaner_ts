@@ -12,7 +12,7 @@ export class Navbar extends React.Component<NavbarProps> {
         return (
             <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                     <img src={logo} className="App-logo" alt="logo" />
                 </a>
                 <button
