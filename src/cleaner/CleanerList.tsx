@@ -21,17 +21,21 @@ export class CleanerList extends React.Component<CleanerListProps & CleanerDispa
     }
 
     render() {
+        const items = this.props.cleaners.map((cleaner) => {
+            return <li key={cleaner.id}><CleanerComponent cleaner={cleaner}/></li>;
+        });
         return (
             <div>
-                <h1>Cleaner Admin</h1>
-                <CleanerComponent />
+                <ul>
+                    {items}
+                </ul>
             </div>
         );
     }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<State>): CleanerDispatch => ({
-    onAddCleaner: (cleaner: Cleaner) => dispatch(addCleaner.started({cleaner})),
+    onAddCleaner: (cleaner: Cleaner) => dispatch(addCleaner.started({ cleaner })),
     onLoadCleanerList: () => dispatch(loadCleanerList.started({}))
 });
 

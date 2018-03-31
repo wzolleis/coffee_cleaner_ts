@@ -1,6 +1,6 @@
 import actionCreatorFactory from 'typescript-fsa';
 import { Cleaner } from './Types';
-import { cleanerEpic } from '../cleaner/CleanerEpics';
+
 const actionCreator = actionCreatorFactory();
 
 export const somethingHappened =
@@ -17,5 +17,4 @@ export const loadCleanerList = actionCreator.async<
   {cleaners: Cleaner[]},   // success type
   { code: number }   // error type
   >('LOAD_CLEANER_LIST');
-
-export const epics = [cleanerEpic];
+  
