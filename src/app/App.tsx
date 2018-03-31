@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router';
 import { Home } from '../components/Home';
 import { About } from '../components/About';
 import { Help } from '../components/Help';
+import CleanerList from '../cleaner/CleanerList';
 
 class App extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class App extends React.Component {
           <Route exact={true} path="/about" component={About}/>
           <Route exact={true} path="/help" component={Help}/>
           <Route exact={true} path="/admin/teams" component={TeamList}/>
+          <Route exact={true} path="/admin/cleaner" component={CleanerList}/>
         </Switch>
       </div>
     );

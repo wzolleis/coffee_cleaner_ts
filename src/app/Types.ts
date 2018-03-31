@@ -9,6 +9,6 @@ export type Team = {
 };
 
 export type Cleaner = {
-    id: number;
+    id?: number;
     name: string;
 };
