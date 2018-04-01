@@ -1,6 +1,6 @@
 import { Action } from 'redux';
 import { isType } from 'typescript-fsa';
-import { somethingHappened, loadCleanerList } from './Actions';
+import { somethingHappened, loadData } from './Actions';
 import { Cleaner, State, Team } from './Types';
 
 const INITIAL_TEAMS: Team[] = [];
@@ -18,10 +18,11 @@ export const reducer = (state: State, action: Action): State => {
         // return {bar: action.payload.foo};
         return state;
     }
-    if (isType(action, loadCleanerList.done)) {
+    if (isType(action, loadData.done)) {
         return {
             ...state,
-            cleaners: action.payload.result.cleaners
+            cleaners: action.payload.result.cleaners,
+            teams: action.payload.result.teams
         };
     }
     return state;

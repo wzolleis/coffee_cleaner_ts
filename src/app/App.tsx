@@ -1,12 +1,11 @@
 import * as React from 'react';
 import './App.css';
-import { TeamList } from '../team/TeamListContainer';
 import { Navbar } from '../navbar/Navbar';
 import { Switch, Route } from 'react-router';
 import { Home } from '../components/Home';
 import { About } from '../components/About';
 import { Help } from '../components/Help';
-import CleanerList from '../cleaner/CleanerList';
+import CleanerAdminContainer from '../cleaner/CleanerAdminContainer';
 
 class App extends React.Component {
   render() {
@@ -20,8 +19,7 @@ class App extends React.Component {
           <Route exact={true} path="/home" component={Home}/>
           <Route exact={true} path="/about" component={About}/>
           <Route exact={true} path="/help" component={Help}/>
-          <Route exact={true} path="/admin/teams" component={TeamList}/>
-          <Route exact={true} path="/admin/cleaner" component={CleanerList}/>
+          <Route exact={true} path="/admin/cleaner" component={CleanerAdminContainer}/>
         </Switch>
       </div>
     );

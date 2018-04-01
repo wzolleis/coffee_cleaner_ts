@@ -1,44 +1,46 @@
 import * as React from 'react';
 import { CleanerComponent } from './CleanerComponent';
-import { State, Cleaner } from '../app/Types';
-import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
-import { addCleaner, loadCleanerList } from '../app/Actions';
-
-export interface CleanerDispatch {
-    onAddCleaner: (cleaner: Cleaner) => void;
-    onLoadCleanerList: () => void;
-}
+import { Cleaner, Team } from '../app/Types';
+import { TeamSelectionComponent } from '../team/TeamSelectionComponent';
 
 interface CleanerListProps {
     cleaners: Cleaner[];
+    teams: Team[];
 }
 
-export class CleanerList extends React.Component<CleanerListProps & CleanerDispatch> {
-    componentDidMount() {
-        console.log('loading cleaner list');
-        this.props.onLoadCleanerList();
-    }
+export class CleanerList extends React.Component<CleanerListProps> {
+     onTeamSelectionChange = (event: React.MouseEvent<HTMLButtonElement>): void => {
+        console.log(event.currentTarget.dataset);
+    };
 
     render() {
-        const items = this.props.cleaners.map((cleaner) => {
-            return <li key={cleaner.id}><CleanerComponent cleaner={cleaner}/></li>;
+        const items: React.ReactFragment = this.props.cleaners.map((cleaner) => {
+            return (
+                <li
+                    className="list-group-item"
+                    key={cleaner.id}
+                >
+                    <div className="row">
+                        <div className="col">
+                            <CleanerComponent cleaner={cleaner} />
+                        </div>
+                        <div className="col">
+                            <TeamSelectionComponent
+                                cleaner={cleaner}
+                                onTeamSelectionChange={this.onTeamSelectionChange}
+                                teams={this.props.teams} 
+                            />
+                        </div>
+                    </div>
+                </li>
+            );
         });
         return (
-            <div>
-                <ul>
+            <div className="container">
+                <ul className="list-group">
                     {items}
                 </ul>
             </div>
         );
     }
 }
-
-const mapDispatchToProps = (dispatch: Dispatch<State>): CleanerDispatch => ({
-    onAddCleaner: (cleaner: Cleaner) => dispatch(addCleaner.started({ cleaner })),
-    onLoadCleanerList: () => dispatch(loadCleanerList.started({}))
-});
-
-const mapStateToProps = (state: State): CleanerListProps => ({ cleaners: state.cleaners });
-
-export default connect(mapStateToProps, mapDispatchToProps)(CleanerList);

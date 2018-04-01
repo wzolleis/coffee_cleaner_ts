@@ -1,5 +1,5 @@
 import actionCreatorFactory from 'typescript-fsa';
-import { Cleaner } from './Types';
+import { Cleaner, Team } from './Types';
 
 const actionCreator = actionCreatorFactory();
 
@@ -12,9 +12,12 @@ export const addCleaner = actionCreator.async<
   { code: number }   // error type
   >('ADD_CLEANER');
 
-export const loadCleanerList = actionCreator.async<
+export const loadData = actionCreator.async<
   {},   // parameter type
-  {cleaners: Cleaner[]},   // success type
+  {
+    cleaners: Cleaner[],
+    teams: Team[]
+  },   // success type
   { code: number }   // error type
-  >('LOAD_CLEANER_LIST');
+  >('LOAD_DATA');
   

@@ -1,15 +1,15 @@
 import { Action } from 'redux';
 import { Observable } from 'rxjs';
-import { loadCleanerList } from '../app/Actions';
+import { loadData } from '../app/Actions';
 
 export const cleanerEpic = (actions$: Observable<Action>) =>
-    actions$.filter(loadCleanerList.started.match)
-        .delay(2000)
+    actions$.filter(loadData.started.match)
+        .delay(1000)
         .map(action => {
             // action.payload is inferred as {foo: string};
             action.payload = {};
 
-            return loadCleanerList.done(
+            return loadData.done(
                 {
                     params: action.payload,
                     result: {
@@ -20,6 +20,20 @@ export const cleanerEpic = (actions$: Observable<Action>) =>
                             id: 2,
                             name: 'JR'
                         }
+                        ],
+                        teams: [
+                            {
+                                id: 1,
+                                name: 'Team 1'
+                            },
+                            {
+                                id: 2,
+                                name: 'Team 2'
+                            },
+                            {
+                                id: 3,
+                                name: 'Team 3'
+                            }
                         ]
                     }
                 });

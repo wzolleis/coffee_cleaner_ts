@@ -9,8 +9,7 @@ import { reducer, INITAL_STATE } from './app/RootReducer';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { cleanerEpic } from './cleaner/CleanerEpics';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import 'rxjs';
+import 'rxjs'; // um Observable mit allen Methoden aus redxx-obervable zu erweitern
 
 export const rootEpic = combineEpics(
     cleanerEpic,
@@ -18,7 +17,7 @@ export const rootEpic = combineEpics(
 
 const epicMiddleware = createEpicMiddleware(rootEpic);
 
-const store = createStore(reducer, INITAL_STATE, composeWithDevTools(applyMiddleware(epicMiddleware)));
+const store = createStore(reducer, INITAL_STATE, applyMiddleware(epicMiddleware));
 
 ReactDOM.render(
     <BrowserRouter>

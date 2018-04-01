@@ -8,9 +8,7 @@ export interface CleanerProps {
 export class CleanerComponent extends React.Component<CleanerProps> {
   render() {
     return (
-      <div>
-        <span>{this.props.cleaner.name}</span>
-      </div>
+      <span className="btn btn-lg btn-primary ">{this.props.cleaner.name}</span>
     );
   }
 }
