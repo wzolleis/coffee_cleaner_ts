@@ -11,7 +11,7 @@ interface CleanerListProps {
 export class CleanerList extends React.Component<CleanerListProps> {
      onTeamSelectionChange = (event: React.MouseEvent<HTMLButtonElement>): void => {
         console.log(event.currentTarget.dataset);
-    };
+    }
 
     render() {
         const items: React.ReactFragment = this.props.cleaners.map((cleaner) => {
