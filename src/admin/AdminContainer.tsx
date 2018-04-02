@@ -4,7 +4,6 @@ import { State, Cleaner, Team } from '../app/Types';
 import { Dispatch } from 'redux';
 import { addCleaner, loadData } from '../app/Actions';
 import { CleanerList } from './CleanerList';
-import { TeamList } from './Teamlist';
 
 export interface AdminContainerProps {
     cleaners: Cleaner[];
@@ -28,22 +27,11 @@ class AdminContainer extends React.Component<AdminContainerProps & CleanerDispat
                     <div className="panel-heading c-list">
                         <span className="title centered">Die lästige Datenverwaltung</span>
                     </div>
-                    <div className="row">
-                        <div className="col">
-                            <CleanerList cleaners={this.props.cleaners} />
-                        </div>
-                        <div className="list-arrows col-md-1 text-center">
-                            <button className="btn btn-default btn-sm move-left">
-                                <span className="fa fa-glyphicon fa fa-chevron-left"/>
-                            </button>
-                            <button className="btn btn-default btn-sm move-right">
-                                <span className="fa fa-glyphicon fa fa-chevron-right"/>
-                            </button>
-                        </div>
-                        <div className="col">
-                            <TeamList teams={this.props.teams} />
-                        </div>
-                    </div>
+                    <CleanerList cleaners={this.props.cleaners} teams={this.props.teams} />
+                    <p />
+                    <span className="submit-btn">
+                        <button className="btn btn-primary">Speichern</button>
+                    </span>
                 </div>
             </div>
         );
