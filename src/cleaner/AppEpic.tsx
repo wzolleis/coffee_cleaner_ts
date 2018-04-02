@@ -2,7 +2,7 @@ import { Action } from 'redux';
 import { Observable } from 'rxjs';
 import { loadData } from '../app/Actions';
 
-export const cleanerEpic = (actions$: Observable<Action>) =>
+export const appEpic = (actions$: Observable<Action>) =>
     actions$.filter(loadData.started.match)
         .delay(1000)
         .map(action => {

@@ -23,13 +23,11 @@ class CleanerAdminContainer extends React.Component<CleanerAdminContainerProps &
     render() {
         return (
             <div className="container">
-                <div className="col-xs-12 col-sm-offset-3 col-sm-6">
-                    <div className="panel panel-default">
-                        <div className="panel-heading c-list">
-                            <span className="title">Reinigungsfachkräfte</span>
-                        </div>
-                        <CleanerList cleaners={this.props.cleaners} teams={this.props.teams} />
+                <div className="panel panel-default">
+                    <div className="panel-heading c-list">
+                        <span className="title">Reinigungsfachkräfte</span>
                     </div>
+                    <CleanerList cleaners={this.props.cleaners} teams={this.props.teams} />
                 </div>
             </div>
         );
