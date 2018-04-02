@@ -4,8 +4,9 @@ import { State, Cleaner, Team } from '../app/Types';
 import { Dispatch } from 'redux';
 import { addCleaner, loadData } from '../app/Actions';
 import { CleanerList } from './CleanerList';
+import { TeamList } from './Teamlist';
 
-export interface CleanerAdminContainerProps {
+export interface AdminContainerProps {
     cleaners: Cleaner[];
     teams: Team[];
 }
@@ -15,7 +16,7 @@ export interface CleanerDispatch {
     onLoadAppData: () => void;
 }
 
-class CleanerAdminContainer extends React.Component<CleanerAdminContainerProps & CleanerDispatch> {
+class AdminContainer extends React.Component<AdminContainerProps & CleanerDispatch> {
     componentDidMount() {
         this.props.onLoadAppData();
     }
@@ -25,9 +26,16 @@ class CleanerAdminContainer extends React.Component<CleanerAdminContainerProps &
             <div className="container">
                 <div className="panel panel-default">
                     <div className="panel-heading c-list">
-                        <span className="title">Reinigungsfachkräfte</span>
+                        <span className="title">Administrattion</span>
                     </div>
-                    <CleanerList cleaners={this.props.cleaners} teams={this.props.teams} />
+                    <div className="row">
+                        <div className="col">
+                            <CleanerList cleaners={this.props.cleaners}/>
+                        </div>
+                        <div className="col">
+                            <TeamList teams={this.props.teams}/>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
@@ -39,11 +47,11 @@ const mapDispatchToProps = (dispatch: Dispatch<State>): CleanerDispatch => ({
     onLoadAppData: () => dispatch(loadData.started({}))
 });
 
-const mapStateToProps = (state: State): CleanerAdminContainerProps => {
+const mapStateToProps = (state: State): AdminContainerProps => {
     return {
         cleaners: state.cleaners,
         teams: state.teams
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CleanerAdminContainer);   
+export default connect(mapStateToProps, mapDispatchToProps)(AdminContainer);   

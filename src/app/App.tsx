@@ -5,21 +5,21 @@ import { Switch, Route } from 'react-router';
 import { Home } from '../components/Home';
 import { About } from '../components/About';
 import { Help } from '../components/Help';
-import CleanerAdminContainer from '../cleaner/CleanerAdminContainer';
+import AdminContainer from '../admin/AdminContainer';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
         <header>
-            <Navbar/>
+          <Navbar />
         </header>
         <Switch>
-          <Route exact={true} path="/" component={Home}/>
-          <Route exact={true} path="/home" component={Home}/>
-          <Route exact={true} path="/about" component={About}/>
-          <Route exact={true} path="/help" component={Help}/>
-          <Route exact={true} path="/admin/cleaner" component={CleanerAdminContainer}/>
+          <Route exact={true} path="/" component={Home} />
+          <Route exact={true} path="/home" component={Home} />
+          <Route exact={true} path="/about" component={About} />
+          <Route exact={true} path="/help" component={Help} />
+          <Route exact={true} path="/admin/cleaner" component={AdminContainer} />
         </Switch>
       </div>
     );
