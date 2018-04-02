@@ -15,10 +15,22 @@ export const appEpic = (actions$: Observable<Action>) =>
                     result: {
                         cleaners: [{
                             id: 1,
-                            name: 'WZ'
+                            name: 'Wolfgang'
                         }, {
                             id: 2,
-                            name: 'JR'
+                            name: 'Jürgen'
+                        },
+                        {
+                            id: 3,
+                            name: 'Christian'
+                        },
+                        {
+                            id: 4,
+                            name: 'Elmar'
+                        },
+                        {
+                            id: 5,
+                            name: 'Udo'
                         }
                         ],
                         teams: [

@@ -5,7 +5,7 @@ type HomeProps = {};
 export class Home extends React.Component<HomeProps> {
     render() {
         return (
-            <div className="jumbotron">
+            <div className="jumbotron centered">
                 <h1 className="display-4">Welcome to Coffee Cleaner</h1>
                 <p className="lead">
                     Das ist ein Dojo-Beispiel für eine React-UI-Komponente mit Typescript

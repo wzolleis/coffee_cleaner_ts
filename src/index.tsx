@@ -9,7 +9,7 @@ import { reducer, INITAL_STATE } from './app/RootReducer';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { appEpic } from './app/AppEpic';
-import 'rxjs'; // um Observable mit allen Methoden aus redxx-obervable zu erweitern
+import 'rxjs'; // um Observable mit allen Methoden aus redux-obervable zu erweitern
 
 export const rootEpic = combineEpics(
     appEpic,

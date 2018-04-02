@@ -5,7 +5,9 @@ type AboutProps = {};
 export class Help extends React.Component<AboutProps> {
     render() {
         return (
-            <h1>Mimimi</h1>
+            <div className="centered">
+                <h1>Mimimi</h1>
+            </div>
         );
     }
 }

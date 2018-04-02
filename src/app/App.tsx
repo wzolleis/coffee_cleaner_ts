@@ -19,7 +19,7 @@ class App extends React.Component {
           <Route exact={true} path="/home" component={Home} />
           <Route exact={true} path="/about" component={About} />
           <Route exact={true} path="/help" component={Help} />
-          <Route exact={true} path="/admin/cleaner" component={AdminContainer} />
+          <Route exact={true} path="/admin/data" component={AdminContainer} />
         </Switch>
       </div>
     );

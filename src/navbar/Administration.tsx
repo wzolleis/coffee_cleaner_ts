@@ -15,7 +15,7 @@ export const Administration = () => {
             Administration
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a className="dropdown-item" href="/admin/cleaner">Reinigungskräfte</a>
+            <a className="dropdown-item" href="/admin/data">Lästige Datenverwaltung</a>
         </div>
     </li>
     );
