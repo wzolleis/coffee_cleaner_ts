@@ -23,7 +23,8 @@ class AdminContainer extends React.Component<AdminContainerProps & CleanerDispat
     }
 
     handleTeamSelection = (cleaner: Cleaner, team: Team) => {
-            console.log('cleaner=', cleaner, 'team=', team);
+            console.log('handleTeamSelection: cleaner=', cleaner, 'team=', team);
+            this.props.onAddCleanerToTeam(cleaner, team);
     };
 
     render() {
