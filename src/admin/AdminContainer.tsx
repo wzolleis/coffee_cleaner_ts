@@ -23,9 +23,8 @@ class AdminContainer extends React.Component<AdminContainerProps & CleanerDispat
     }
 
     handleTeamSelection = (cleaner: Cleaner, team: Team) => {
-            console.log('handleTeamSelection: cleaner=', cleaner, 'team=', team);
-            this.props.onAddCleanerToTeam(cleaner, team);
-    };
+        this.props.onAddCleanerToTeam(cleaner, team);
+    }
 
     render() {
         return (
@@ -34,12 +33,12 @@ class AdminContainer extends React.Component<AdminContainerProps & CleanerDispat
                     <div className="panel-heading c-list">
                         <span className="title centered">Die lästige Datenverwaltung</span>
                     </div>
-                    <CleanerList 
-                        cleaners={this.props.cleaners} 
-                        teams={this.props.teams} 
+                    <CleanerList
+                        cleaners={this.props.cleaners}
+                        teams={this.props.teams}
                         handleTeamSelection={this.handleTeamSelection}
                     />
-                    <p />
+                    <p/>
                     <span className="submit-btn">
                         <button className="btn btn-primary">Speichern</button>
                     </span>
@@ -50,7 +49,7 @@ class AdminContainer extends React.Component<AdminContainerProps & CleanerDispat
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<State>): CleanerDispatch => ({
-    onAddCleaner: (cleaner: Cleaner) => dispatch(addCleaner.started({ cleaner })),
+    onAddCleaner: (cleaner: Cleaner) => dispatch(addCleaner.started({cleaner})),
     onLoadAppData: () => dispatch(loadData.started({})),
     onAddCleanerToTeam: (cleaner: Cleaner, team: Team) => dispatch(addCleanerToTeam.started({cleaner, team}))
 });
