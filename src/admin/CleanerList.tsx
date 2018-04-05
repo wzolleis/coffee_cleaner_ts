@@ -5,6 +5,7 @@ import Select from 'react-select';
 import '../assets/react-select.css';
 
 interface TeamOption {
+    cleaner: Cleaner;
     value: number;
     label: string;
 }
@@ -12,21 +13,19 @@ interface TeamOption {
 interface CleanerListProps {
     cleaners: Cleaner[];
     teams: Team[];
+    handleTeamSelection: (cleaner: Cleaner, team: Team) => void;
 }
 
 interface CleanerListState {
-    selectedOption?: TeamOption;
+    selectedOption: TeamOption[];
 }
 
 export class CleanerList extends React.Component<CleanerListProps, CleanerListState> {
-
-    state: CleanerListState = {
-        selectedOption: undefined,
-    };
-
-    onHandleChange = (selectedOption: TeamOption) => {
-        this.setState({ selectedOption });
-        console.log(`Selected: ${selectedOption.value}`);
+        onHandleChange = (selectedOption: TeamOption, cleaner: Cleaner) => {
+        console.log(`Selected: ${selectedOption}`);
+        const selection: Team[] = this.props.teams.filter((t) => t.id === selectedOption.value);
+        const team: Team = selection[0];
+        this.props.handleTeamSelection(cleaner, team);
     };
 
     render() {
@@ -40,8 +39,8 @@ export class CleanerList extends React.Component<CleanerListProps, CleanerListSt
         });
 
         const items: React.ReactFragment = this.props.cleaners.map((cleaner) => {
-            const selectedOption: TeamOption | undefined = this.state.selectedOption;
-            const value = selectedOption && selectedOption.value;
+            
+            const value: number =  cleaner.team ? cleaner.team.id : -1;
             return (
                 <li className="list-group-item" key={cleaner.id} >
                     <div className="row">
@@ -51,7 +50,7 @@ export class CleanerList extends React.Component<CleanerListProps, CleanerListSt
                         <div className="col">
                             <Select
                                 value={value}
-                                onChange={this.onHandleChange}
+                                onChange={(e: TeamOption) => this.onHandleChange(e, cleaner)}
                                 name="form-field-name"
                                 options={options}
                             />

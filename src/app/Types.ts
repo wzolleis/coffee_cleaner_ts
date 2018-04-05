@@ -11,4 +11,5 @@ export type Team = {
 export type Cleaner = {
     id?: number;
     name: string;
+    team?: Team;
 };

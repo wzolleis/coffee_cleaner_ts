@@ -6,12 +6,30 @@ const actionCreator = actionCreatorFactory();
 export const somethingHappened =
   actionCreator<{ foo: string }>('SOMETHING_HAPPENED');
 
+/**
+ * Beispiel um einen neuen Cleaner zu definieren
+ */
 export const addCleaner = actionCreator.async<
   { cleaner: Cleaner },   // parameter type
   {},   // success type
   { code: number }   // error type
   >('ADD_CLEANER');
 
+  /**
+   * Fuegt einen Cleaner zu einem Team hinzu
+   */
+export const addCleanerToTeam = actionCreator.async<
+  {
+    cleaner: Cleaner,
+    team: Team
+  },   // parameter type
+  {cleaner: Cleaner},   // success type
+  { code: number }   // error type
+  >('ADD_CLEANER_TO_TEAM');
+
+/**
+ * Laedt die Daten der Anwendung
+ */
 export const loadData = actionCreator.async<
   {},   // parameter type
   {
@@ -20,4 +38,3 @@ export const loadData = actionCreator.async<
   },   // success type
   { code: number }   // error type
   >('LOAD_DATA');
-  
