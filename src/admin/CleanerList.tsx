@@ -22,10 +22,14 @@ interface CleanerListState {
 
 export class CleanerList extends React.Component<CleanerListProps, CleanerListState> {
     onHandleChange = (selectedOption: TeamOption, cleaner: Cleaner) => {
-        console.log(`Selected: ${selectedOption}`);
-        const selection: Team[] = this.props.teams.filter((t) => t.id === selectedOption.value);
-        const team: Team = selection[0];
-        this.props.handleTeamSelection(cleaner, team);
+        if (selectedOption) {
+            const selection: Team[] = this.props.teams.filter((t) => t.id === selectedOption.value);
+            const team: Team = selection[0];
+            this.props.handleTeamSelection(cleaner, team);
+        } else {
+            // todo
+            // this.props.removeFromTeam(cleaner);
+        }
     }
 
     render() {
@@ -45,7 +49,7 @@ export class CleanerList extends React.Component<CleanerListProps, CleanerListSt
                 <li className="list-group-item" key={cleaner.id}>
                     <div className="row">
                         <div className="col">
-                            <CleanerComponent cleaner={cleaner}/>
+                            <CleanerComponent cleaner={cleaner} />
                         </div>
                         <div className="col">
                             <Select
