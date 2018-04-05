@@ -21,11 +21,16 @@ export const reducer = (state: State, action: Action): State => {
     }
 
     if (isType(action, addCleanerToTeam.done)) {
-        const cleaners: Cleaner[] = state.cleaners.filter(c => c.id !== action.payload.result.cleaner.id);
-        cleaners.push(action.payload.result.cleaner);
+        const updated = action.payload.result.cleaner;
+        const index = state.cleaners.findIndex(c => c.id === updated.id);
+        const cleanersLeft = state.cleaners.slice(0, index);
+        const cleanersRight = state.cleaners.slice(index + 1, state.cleaners.length);
+
+        const updatedCleaners = [...cleanersLeft, updated, ...cleanersRight];
+
         return {
             ...state,
-            cleaners
+            cleaners: updatedCleaners
         };
     }
     return state;
