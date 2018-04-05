@@ -3,12 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/lodash": "^4.14.106",
-    "@types/react-select": "^1.2.6",
     "bootstrap": "^4.0.0",
     "bootstrap-select": "^1.12.4",
     "jquery": "^3.3.1",
-    "lodash": "^4.17.5",
     "popper.js": "^1.14.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
@@ -30,6 +27,7 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
+    "@types/react-select": "^1.2.6",
     "@types/jest": "^22.2.2",
     "@types/node": "^9.6.1",
     "@types/react": "^16.1.0",
