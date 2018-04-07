@@ -11,9 +11,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { appEpic } from './app/AppEpic';
 import 'rxjs'; // um Observable mit allen Methoden aus redux-obervable zu erweitern
 import { add2TeamEpic } from './admin/Add2TeamEpic'; 
+import { removeCleanerFromTeamEpic } from './admin/RemoveFromTeamEpic';
 
 export const rootEpic = combineEpics(
-    appEpic, add2TeamEpic
+    appEpic, add2TeamEpic, removeCleanerFromTeamEpic
 );
 
 const epicMiddleware = createEpicMiddleware(rootEpic);

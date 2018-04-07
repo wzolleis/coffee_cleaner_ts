@@ -14,6 +14,7 @@ interface CleanerListProps {
     cleaners: Cleaner[];
     teams: Team[];
     handleTeamSelection: (cleaner: Cleaner, team: Team) => void;
+    handleTeamRemoval: (cleaner: Cleaner) => void;
 }
 
 interface CleanerListState {
@@ -28,7 +29,8 @@ export class CleanerList extends React.Component<CleanerListProps, CleanerListSt
             this.props.handleTeamSelection(cleaner, team);
         } else {
             // todo
-            // this.props.removeFromTeam(cleaner);
+            cleaner.team = undefined;
+            this.props.handleTeamRemoval(cleaner);
         }
     }
 
