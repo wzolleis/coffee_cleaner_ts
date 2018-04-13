@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/src/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -43,8 +43,8 @@
       <file leaf-file-name="RootReducer.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/RootReducer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+            <state relative-caret-position="660">
+              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -55,7 +55,7 @@
       <file leaf-file-name="Add2TeamEpic.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/Add2TeamEpic.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="255">
               <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -78,11 +78,8 @@
       <file leaf-file-name="AdminContainer.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/admin/AdminContainer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="409">
+              <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -90,8 +87,8 @@
       <file leaf-file-name="CleanerList.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/CleanerList.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+            <state relative-caret-position="1050">
+              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -208,45 +205,6 @@
             <path>
               <item name="coffee_cleaner_ts" type="b2602c69:ProjectViewProjectNode" />
               <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coffee_cleaner_ts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="redux-observable" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coffee_cleaner_ts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="redux-observable" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coffee_cleaner_ts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="redux-observable" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="redux-observable.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="coffee_cleaner_ts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="rxjs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coffee_cleaner_ts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="rxjs" type="462c0819:PsiDirectoryNode" />
-              <item name="operator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coffee_cleaner_ts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -254,12 +212,6 @@
               <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coffee_cleaner_ts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coffee_cleaner_ts" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -398,6 +350,8 @@
       <workItem from="1522677442402" duration="963000" />
       <workItem from="1522960385318" duration="1843000" />
       <workItem from="1522964301805" duration="522000" />
+      <workItem from="1523134245704" duration="133000" />
+      <workItem from="1523647211313" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="initial setup and some react-ts-components">
       <created>1521504436362</created>
@@ -525,15 +479,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522965849903</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Implementiere das Entfernen eines Cleaners aus einem Team">
+      <created>1523134314179</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1523134314179</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27176000" />
+    <option name="totallyTimeSpent" value="27459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -545,13 +505,13 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4945055" weight="0.2933754" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.4945055" visible="true" weight="0.2933754" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4920635" weight="0.30283913" />
       <window_info anchor="right" id="JSON Viewer" order="3" />
       <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.4957265" visible="true" weight="0.3280757" />
+      <window_info anchor="bottom" id="TypeScript" order="7" sideWeight="0.4957265" weight="0.3280757" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20573871" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21062271" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -640,7 +600,8 @@
     <MESSAGE value="code style angepasst, jetzt werden keine unnötigen Semi-colons mehr eingefügt" />
     <MESSAGE value="Reducer fügt jetzt den geänderten Cleaner an der richtigen Stelle ein" />
     <MESSAGE value="Das Entfernen eines Cleaners aus dem Team führt jetzt nicht mehr zu einem Fehler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Das Entfernen eines Cleaners aus dem Team führt jetzt nicht mehr zu einem Fehler" />
+    <MESSAGE value="Implementiere das Entfernen eines Cleaners aus einem Team" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementiere das Entfernen eines Cleaners aus einem Team" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -829,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/RootReducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        <state relative-caret-position="660">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -871,7 +832,7 @@
     <entry file="file://$PROJECT_DIR$/src/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -880,7 +841,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/Add2TeamEpic.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="255">
           <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -890,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/CleanerList.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+        <state relative-caret-position="1050">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -900,11 +861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/AdminContainer.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="409">
+          <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
         </state>
       </provider>
     </entry>
